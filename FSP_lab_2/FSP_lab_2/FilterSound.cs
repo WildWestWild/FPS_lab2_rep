@@ -103,13 +103,6 @@ namespace FSP_lab_2
         }
         private void OnExcel(List<ArgumentAndFunc[]> data)
         {
-            // создаем каталог для файла
-           
-            DirectoryInfo dirInfo = new DirectoryInfo(path);
-            if (!dirInfo.Exists)
-            {
-                dirInfo.Create();
-            }
             // запись в файл
             using (StreamWriter sw = new StreamWriter(path, false, System.Text.Encoding.Default))
             {
